@@ -131,7 +131,7 @@
 	<target name="compile" depends="init,createdirs" description="Compiles the source code to the classes directory.">
 		<mkdir dir="classes" />
 
-		<javac srcdir="src" destdir="classes" debug="true" deprecation="false" optimize="false" source="1.6" target="1.6" verbose="${javac.verbose.bool}">
+		<javac srcdir="src" destdir="classes" debug="true" deprecation="false" optimize="false" source="1.7" target="1.7" verbose="${javac.verbose.bool}">
 			<classpath path="${classpath}" />
 			<classpath refid="lib.classpath" />
 			<classpath refid="dynamo.classpath" />

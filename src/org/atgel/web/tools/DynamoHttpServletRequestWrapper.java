@@ -39,7 +39,6 @@ import atg.servlet.HttpSessionRequest;
 import atg.servlet.MimeTyper;
 import atg.servlet.ParameterHandler;
 import atg.servlet.RequestLocale;
-import atg.servlet.WebPools;
 import atg.servlet.exittracking.ExitTrackingHandler;
 import atg.servlet.minimal.WebApplicationInterface;
 
@@ -538,10 +537,6 @@ public class DynamoHttpServletRequestWrapper extends DynamoHttpServletRequest {
 		return request.getWebApplication();
 	}
 
-	public WebPools getWebPools() {
-		return request.getWebPools();
-	}
-
 	public NameContext getWindowScope() {
 		return request.getWindowScope();
 	}
@@ -1036,10 +1031,6 @@ public class DynamoHttpServletRequestWrapper extends DynamoHttpServletRequest {
 
 	public void setWebApplication(WebApplicationInterface pWebApplication) {
 		request.setWebApplication(pWebApplication);
-	}
-
-	public void setWebPools(WebPools pWebPools) {
-		request.setWebPools(pWebPools);
 	}
 
 	public void setWindowScopeManager(WindowScopeManager pScopeManager) {
