@@ -191,7 +191,6 @@
 	<!-- Create the directories used in the build process. Not intended to be used publically. -->
 	<target name="createdirs">
 		<mkdir dir="build" />
-		<mkdir dir="build/liveconfig" />
 		<mkdir dir="build/config" />
 		<mkdir dir="build/classes" />
 		<mkdir dir="javadoc" />
