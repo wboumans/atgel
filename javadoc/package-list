@@ -1,0 +1,7 @@
+org.atgel.i18n
+org.atgel.userprofiling
+org.atgel.util
+org.atgel.web.el
+org.atgel.web.pipeline
+org.atgel.web.template
+org.atgel.web.tools
