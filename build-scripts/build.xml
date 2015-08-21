@@ -22,15 +22,13 @@
 	<!-- The classpath for the project. -->
 	<path id="lib.classpath">
 		<fileset dir="lib">
-			<include name="**/*." />
-			<include name="**/*.zip" />
+			<include name="**/*.jar" />
 		</fileset>
 	</path>
 
 	<!-- The classpath for build libraries this contains ant extenstion, classes that are provided my server that  -->
 	<path id="buildlib.classpath">
 		<fileset dir="build-lib/">
-			<include name="**/*." />
 			<include name="**/*.jar" />
 		</fileset>
 	</path>
