@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:lxslt="http://xml.apache.org/xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+                        function toggleCodeSection(btn, id)
+                        {
+                                area = document.getElementById(id);
+                                if (area.style.display == 'none')
+                                        {
+                                        btn.innerHTML = '-';
+                                        area.style.display = 'inline';
+                                        }
+                                else
+                                        {
+                                        btn.innerHTML = '+';
+                                        area.style.display = 'none';
+                                        }
+                        }
+                </script>
+<style>
+                        .SummaryTitle  { }
+                        .SummaryNumber { background-color:#DDDDDD; text-align: center; }
+                        .ItemNumber    { background-color: #DDDDDD; }
+                        .CodeFragment  { background-color: #BBBBBB; display:none; font:normal normal normal 9pt Courier; }
+                        .ExpandButton  { background-color: #FFFFFF; font-size: 8pt; width: 20px; height: 20px; margin:0px; }
+                </style>
+</head>
+<body>
+<h2>Summary of duplicated code</h2>
+    This page summarizes the code fragments that have been found to be replicated in the code.
+    Only those fragments longer than 30 lines of code are shown.
+    <p></p>
+<table border="1" class="summary" cellpadding="2">
+<tr style="background-color:#CCCCCC;">
+<th># duplications</th><th>Total lines</th><th>Total tokens</th><th>Approx # bytes</th>
+</tr>
+<tr>
+<td class="SummaryNumber">4</td><td class="SummaryNumber">240</td><td class="SummaryNumber">235</td><td class="SummaryNumber">940</td>
+</tr>
+</table>
+<p></p>
+    You expand and collapse the code fragments using the + buttons. You can also navigate to the source code by clicking
+    on the file names.
+    <p></p>
+<table>
+<tr style="background-color: #444444; color: #DDDDDD;">
+<td>ID</td><td>Files</td><td>Lines</td>
+</tr>
+<tr>
+<td class="ItemNumber">1</td><td>
+<table>
+<tr>
+<td><a href="../src//Users/devon/git/atgel/src/org/atgel/web/el/I18nELResolver.java.html#217">/Users/devon/git/atgel/src/org/atgel/web/el/I18nELResolver.java</a></td><td> line 217</td>
+</tr>
+<tr>
+<td><a href="../src//Users/devon/git/atgel/src/org/atgel/web/el/RepositoryItemELResolver.java.html#259">/Users/devon/git/atgel/src/org/atgel/web/el/RepositoryItemELResolver.java</a></td><td> line 259</td>
+</tr>
+</table>
+</td><td># lines : 93</td>
+</tr>
+<tr>
+<td></td><td colspan="2" valign="top">
+<table>
+<tr>
+<td valign="top"><button class="ExpandButton" onclick="blur(); toggleCodeSection(this, 'frag_1')">+</button></td><td><textarea cols="100" rows="30" wrap="off" class="CodeFragment" style="display:none;" id="frag_1">
+
+			context.setPropertyResolved(true);
+		}
+		return result;
+	}
+
+	 
+	/**
+	 * If the base object is a map, returns whether a call to
+	 * {@link #setValue(ELContext, Object, Object, Object)} will always fail. If
+	 * the base is a Map, the propertyResolved property of the ELContext object
+	 * must be set to true by this resolver, before returning. If this property
+	 * is not true after this method is called, the caller should ignore the
+	 * return value. If this resolver was constructed in read-only mode, this
+	 * method will always return true. If a Map was created using
+	 * java.util.Collections.unmodifiableMap(Map), this method must return true.
+	 * Unfortunately, there is no Collections API method to detect this.
+	 * However, an implementation can create a prototype unmodifiable Map and
+	 * query its runtime type to see if it matches the runtime type of the base
+	 * object as a workaround.
+	 * 
+	 * @param context
+	 *            The context of this evaluation.
+	 * @param base
+	 *            The map to analyze. Only bases of type Map are handled by this
+	 *            resolver.
+	 * @param property
+	 *            The key to return the acceptable type for. Ignored by this
+	 *            resolver.
+	 * @return If the propertyResolved property of ELContext was set to true,
+	 *         then true if calling the setValue method will always fail or
+	 *         false if it is possible that such a call may succeed; otherwise
+	 *         undefined.
+	 * @throws NullPointerException
+	 *             if context is null.
+	 * @throws ELException
+	 *             if an exception was thrown while performing the property or
+	 *             variable resolution. The thrown exception must be included as
+	 *             the cause property of this exception, if available.
+	 */
+	@Override
+	public boolean isReadOnly(ELContext context, Object base, Object property) {
+		if (context == null) {
+			throw new NullPointerException("context is null");
+		}
+		if (isResolvable(base)) {
+			context.setPropertyResolved(true);
+		}
+		return readOnly;
+	}
+
+	/**
+	 * If the base object is a map, attempts to set the value associated with
+	 * the given key, as specified by the property argument. If the base is a
+	 * Map, the propertyResolved property of the ELContext object must be set to
+	 * true by this resolver, before returning. If this property is not true
+	 * after this method is called, the caller can safely assume no value was
+	 * set. If this resolver was constructed in read-only mode, this method will
+	 * always throw PropertyNotWritableException. If a Map was created using
+	 * java.util.Collections.unmodifiableMap(Map), this method must throw
+	 * PropertyNotWritableException. Unfortunately, there is no Collections API
+	 * method to detect this. However, an implementation can create a prototype
+	 * unmodifiable Map and query its runtime type to see if it matches the
+	 * runtime type of the base object as a workaround.
+	 * 
+	 * @param context
+	 *            The context of this evaluation.
+	 * @param base
+	 *            The map to analyze. Only bases of type Map are handled by this
+	 *            resolver.
+	 * @param property
+	 *            The key to return the acceptable type for. Ignored by this
+	 *            resolver.
+	 * @param value
+	 *            The value to be associated with the specified key.
+	 * @throws ClassCastException
+	 *             if the class of the specified key or value prevents it from
+	 *             being stored in this map.
+	 * @throws NullPointerException
+	 *             if context is null, or if this map does not permit null keys
+	 *             or values, and the specified key or value is null.
+	 * @throws IllegalArgumentException
+	 *             if some aspect of this key or value prevents it from being
+	 *             stored in this map.
+	 * @throws PropertyNotWritableException
+	 *             if this resolver was constructed in read-only mode, or if the
+	 *             put operation is not supported by the underlying map.
+	 * @throws ELException
+	 *             if an exception was thrown while performing the property or
+	 *             variable resolution. The thrown exception must be included as
+	 *             the cause property of this exception, if available.
+	 */
+	@Override
+	public void setValue(ELContext context, Object base, Object property, Object value) {
+
+</textarea></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<hr>
+</td>
+</tr>
+<tr>
+<td class="ItemNumber">2</td><td>
+<table>
+<tr>
+<td><a href="../src//Users/devon/git/atgel/src/org/atgel/web/el/I18nELResolver.java.html#64">/Users/devon/git/atgel/src/org/atgel/web/el/I18nELResolver.java</a></td><td> line 64</td>
+</tr>
+<tr>
+<td><a href="../src//Users/devon/git/atgel/src/org/atgel/web/el/RepositoryItemELResolver.java.html#58">/Users/devon/git/atgel/src/org/atgel/web/el/RepositoryItemELResolver.java</a></td><td> line 58</td>
+</tr>
+</table>
+</td><td># lines : 62</td>
+</tr>
+<tr>
+<td></td><td colspan="2" valign="top">
+<table>
+<tr>
+<td valign="top"><button class="ExpandButton" onclick="blur(); toggleCodeSection(this, 'frag_2')">+</button></td><td><textarea cols="100" rows="30" wrap="off" class="CodeFragment" style="display:none;" id="frag_2">
+
+	public RepositoryItemELResolver(boolean readOnly) {
+		this.readOnly = readOnly;
+	}
+
+	/**
+	 * If the base object is a atg.repository.RepositoryItem, returns the most
+	 * general type that this resolver accepts for the property argument.
+	 * Otherwise, returns null. Assuming the base is a
+	 * atg.repository.RepositoryItem, this method will always return
+	 * Object.class. This is because atg.repository.RepositoryItem accept any
+	 * object as a key.
+	 * 
+	 * @param context
+	 *            The context of this evaluation.
+	 * @param base
+	 *            The map to analyze. Only bases of type
+	 *            atg.repository.RepositoryItem are handled by this resolver.
+	 * @return null if base is not a atg.repository.RepositoryItem; otherwise
+	 *         Object.class.
+	 */
+	@Override
+	public Class&lt;?&gt; getCommonPropertyType(ELContext context, Object base) {
+		return isResolvable(base) ? Object.class : null;
+	}
+
+	/**
+	 * If the base object is a atg.repository.RepositoryItem, returns an
+	 * Iterator containing the set of propertyValues available in the
+	 * atg.repository.RepositoryItem. Otherwise, returns null. The Iterator
+	 * returned must contain zero or more instances of
+	 * java.beans.FeatureDescriptor. Each info object contains information about
+	 * a propertyValues in the atg.repository.RepositoryItem, and is initialized
+	 * as follows:
+	 * &lt;ul&gt;
+	 * &lt;li&gt;displayName - The return value of calling the toString method on this
+	 * propertyValues, or "null" if the key is null&lt;/li&gt;
+	 * &lt;li&gt;name - Same as displayName property&lt;/li&gt;
+	 * &lt;li&gt;shortDescription - Empty string&lt;/li&gt;
+	 * &lt;li&gt;expert - false&lt;/li&gt;
+	 * &lt;li&gt;hidden - false&lt;/li&gt;
+	 * &lt;li&gt;preferred - true&lt;/li&gt;
+	 * &lt;/ul&gt;
+	 * In addition, the following named attributes must be set in the returned
+	 * FeatureDescriptors:
+	 * &lt;ul&gt;
+	 * &lt;li&gt;{@link ELResolver#TYPE} - The return value of calling the getClass()
+	 * method on this key, or null if the key is null.&lt;/li&gt;
+	 * &lt;li&gt;{@link ELResolver#RESOLVABLE_AT_DESIGN_TIME} - true&lt;/li&gt;
+	 * &lt;/ul&gt;
+	 * 
+	 * @param context
+	 *            The context of this evaluation.
+	 * @param base
+	 *            The map to analyze. Only bases of type Map are handled by this
+	 *            resolver.
+	 * @return An Iterator containing zero or more (possibly infinitely more)
+	 *         FeatureDescriptor objects, each representing a propertyValues in
+	 *         this atg.repository.RepositoryItem, or null if the base object is
+	 *         not a atg.repository.RepositoryItem.
+	 */
+	@Override
+	public Iterator&lt;FeatureDescriptor&gt; getFeatureDescriptors(ELContext context, Object base) {
+
+</textarea></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<hr>
+</td>
+</tr>
+<tr>
+<td class="ItemNumber">3</td><td>
+<table>
+<tr>
+<td><a href="../src//Users/devon/git/atgel/src/org/atgel/web/el/I18nELResolver.java.html#165">/Users/devon/git/atgel/src/org/atgel/web/el/I18nELResolver.java</a></td><td> line 165</td>
+</tr>
+<tr>
+<td><a href="../src//Users/devon/git/atgel/src/org/atgel/web/el/RepositoryItemELResolver.java.html#203">/Users/devon/git/atgel/src/org/atgel/web/el/RepositoryItemELResolver.java</a></td><td> line 203</td>
+</tr>
+</table>
+</td><td># lines : 45</td>
+</tr>
+<tr>
+<td></td><td colspan="2" valign="top">
+<table>
+<tr>
+<td valign="top"><button class="ExpandButton" onclick="blur(); toggleCodeSection(this, 'frag_3')">+</button></td><td><textarea cols="100" rows="30" wrap="off" class="CodeFragment" style="display:none;" id="frag_3">
+
+			result = Object.class;
+			context.setPropertyResolved(true);
+		}
+		return result;
+	}
+
+	/**
+	 * If the base object is a atg.repository.RepositoryItem, returns the value
+	 * associated with the given key, as specified by the property argument. If
+	 * the key was not found, null is returned. If the base is a
+	 * atg.repository.RepositoryItem, the propertyResolved property of the
+	 * ELContext object must be set to true by this resolver, before returning.
+	 * If this property is not true after this method is called, the caller
+	 * should ignore the return value.
+	 * 
+	 * @param context
+	 *            The context of this evaluation.
+	 * @param base
+	 *            The map to analyze. Only bases of type Map are handled by this
+	 *            resolver.
+	 * @param property
+	 *            The key to return the acceptable type for. Ignored by this
+	 *            resolver.
+	 * @return If the propertyResolved property of ELContext was set to true,
+	 *         then the value associated with the given key or null if the key
+	 *         was not found. Otherwise, undefined.
+	 * @throws ClassCastException
+	 *             if the key is of an inappropriate type for this map
+	 *             (optionally thrown by the underlying Map).
+	 * @throws NullPointerException
+	 *             if context is null, or if the key is null and this map does
+	 *             not permit null keys (the latter is optionally thrown by the
+	 *             underlying Map).
+	 * @throws ELException
+	 *             if an exception was thrown while performing the property or
+	 *             variable resolution. The thrown exception must be included as
+	 *             the cause property of this exception, if available.
+	 */
+	@Override
+	public Object getValue(ELContext context, Object base, Object property) {
+	 	if (context == null) {
+			throw new NullPointerException("context is null");
+		}
+		Object result = null;
+		if (isResolvable(base)) {
+
+</textarea></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<hr>
+</td>
+</tr>
+<tr>
+<td class="ItemNumber">4</td><td>
+<table>
+<tr>
+<td><a href="../src//Users/devon/git/atgel/src/org/atgel/web/el/I18nELResolver.java.html#126">/Users/devon/git/atgel/src/org/atgel/web/el/I18nELResolver.java</a></td><td> line 126</td>
+</tr>
+<tr>
+<td><a href="../src//Users/devon/git/atgel/src/org/atgel/web/el/RepositoryItemELResolver.java.html#164">/Users/devon/git/atgel/src/org/atgel/web/el/RepositoryItemELResolver.java</a></td><td> line 164</td>
+</tr>
+</table>
+</td><td># lines : 40</td>
+</tr>
+<tr>
+<td></td><td colspan="2" valign="top">
+<table>
+<tr>
+<td valign="top"><button class="ExpandButton" onclick="blur(); toggleCodeSection(this, 'frag_4')">+</button></td><td><textarea cols="100" rows="30" wrap="off" class="CodeFragment" style="display:none;" id="frag_4">
+
+		return null;
+	}
+
+	/**
+	 * If the base object is a atg.repository.RepositoryItem, returns the most
+	 * general acceptable type for a value in this
+	 * atg.repository.RepositoryItem. If the base is a
+	 * atg.repository.RepositoryItem, the propertyResolved property of the
+	 * ELContext object must be set to true by this resolver, before returning.
+	 * If this property is not true after this method is called, the caller
+	 * should ignore the return value. Assuming the base is a Map, this method
+	 * will always return Object.class. This is because
+	 * atg.repository.RepositoryItem accept any object as the value for a given
+	 * key.
+	 * 
+	 * @param context
+	 *            The context of this evaluation.
+	 * @param base
+	 *            The map to analyze. Only bases of type Map are handled by this
+	 *            resolver.
+	 * @param property
+	 *            The property to return the acceptable type for. Ignored by
+	 *            this resolver.
+	 * @return If the propertyResolved property of ELContext was set to true,
+	 *         then the most general acceptable type; otherwise undefined.
+	 * @throws NullPointerException
+	 *             if context is null
+	 * @throws ELException
+	 *             if an exception was thrown while performing the property or
+	 *             variable resolution. The thrown exception must be included as
+	 *             the cause property of this exception, if available.
+	 */
+	@Override
+	public Class&lt;?&gt; getType(ELContext context, Object base, Object property) {
+		if (context == null) {
+			throw new NullPointerException("context is null");
+		}
+		Class&lt;?&gt; result = null;
+		if (isResolvable(base)) {
+			result = Object.class;
+
+</textarea></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<hr>
+</td>
+</tr>
+</table>
+</body>
+</html>
