@@ -1,49 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="atgel" default="deploy-ear-to-jboss" basedir="..">
+<project name="atgel" default="build-module" basedir="../">
 	<property environment="env" />
- 
+	<property name="global.dir" value="." />
+
+	<echo message="#############################################################################" />
+	<echo message="about to load build-scripts/${user.name}.properties" />
+	<property file="build-scripts/${user.name}.properties" />
+
 	<echo message="#############################################################################" />
 	<echo message="about to load build-scripts/build.properties" />
 	<property file="build-scripts/build.properties" />
-	
-	<echo message="#############################################################################" />
-	<echo message="about to load build-scripts/$${user.name}.properties where $${user.name}=${user.name}" />
-	<property file="build-scripts/${user.name}.properties" />  	
-	
-	<property name="global.dir" value="." />
-	
-	<condition property="isWindows">
-	       <os family="windows" />
-	</condition>
-	<condition property="isLinux">
-	       <os family="unix" />
-	</condition>
-	<condition property="isMac">
-		   <os family="mac" />
-	</condition>
-		
-	
+
+
+
+
+
 	<!-- Define an if and else task for use in this definition -->
+	<taskdef name="if" classname="ise.antelope.tasks.IfTask" classpath="${basedir}/build-lib/atg-ant.jar" />
+	<taskdef name="else" classname="ise.antelope.tasks.ElseTask" classpath="${basedir}/build-lib/atg-ant.jar" />
 
 	<!-- The classpath for the project. -->
 	<path id="lib.classpath">
 		<fileset dir="lib">
-			<include name="**/*.
-			" />
+			<include name="**/*." />
 			<include name="**/*.zip" />
 		</fileset>
 	</path>
- 
+
 	<!-- The classpath for build libraries this contains ant extenstion, classes that are provided my server that  -->
 	<path id="buildlib.classpath">
 		<fileset dir="build-lib/">
-			<include name="*.
-			" />
-		</fileset> 
+			<include name="**/*." />
+			<include name="**/*.jar" />
+		</fileset>
 	</path>
- 
-	<taskdef name="if" classname="ise.antelope.tasks.IfTask" classpath="${basedir}/build-lib/atg-ant.jar" />
-	<taskdef name="else" classname="ise.antelope.tasks.ElseTask" classpath="${basedir}/build-lib/atg-ant.jar" />
 
 
 	<!-- The dynamo class path -->
@@ -71,47 +61,13 @@
 		<include name="**/*.xml" />
 		<include name="**/*.dtd" />
 	</patternset>
-	
-	<!-- This target create an eclipse project. -->
-	 <target name="eclipse">
-		<taskdef name="eclipse" classname="prantl.ant.eclipse.EclipseTask"  classpath="build-lib/ant-eclipse-1.0-jvm1.2.jar" />
-	    <eclipse>
-	      <project />
-	      <classpath>
-	        <source path="src" />
-	        <output path="classes" />
-	     	<library pathref="lib.classpath"/>
-	     	<library pathref="dynamo.classpath"/>
-	      </classpath>
-	    </eclipse>
-	  </target>
-
-	<!-- This target builds the module, assembles the ear, and deploys it to JBoss. -->
-	<target name="deploy-ear-to-jboss" depends="init,  build-modules, execute-assembler-cmd" description="builds the module, assembles the ear, and deploys it to JBoss" />
-
-	<!-- This target will copy over the files within the j2ee apps to the live EAR in JBoss for incremental deployments of changed jsps, etc... -->
-	<target name="dev-deploy-wars" depends="init" description="Copies the J2EE application for the module">
-		<echo message="Install To:   = ${jboss.home}/server/${jboss.server}/deploy/${module.name}.ear" />
-		<echo message="Install From: = j2ee-apps" />
-
-		<copy description="Copying j2ee files to deployment" todir="${jboss.home}/server/${jboss.server}/deploy/${module.name}.ear" verbose="${copy.verbose.bool}">
-			<fileset dir="j2ee-apps/">
-				<exclude name="META-INF/*.*" />
-				<exclude name="WEB-INF/*.*" />
-			</fileset>
-		</copy>
-	</target>
 
 	<!-- Deletes the build directories. -->
 	<target name="clean" depends="init" description="Deletes the contents of the build directories, remove tmp, logs work.">
 		<echo message="Deleting:" />
-		<echo message="  build" />
 		<delete failonerror="false" includeEmptyDirs="true">
 			<fileset dir="build" />
-			<fileset dir="${jboss.home}/server/${jboss.server}/deploy/${module.name}.ear" />
-			<fileset dir="${jboss.home}/server/${jboss.server}/deploy/logs" />
-			<fileset dir="${jboss.home}/server/${jboss.server}/deploy/tmp" />
-			<fileset dir="${jboss.home}/server/${jboss.server}/deploy/work" />
+			<fileset dir="${install.dir}" />
 		</delete>
 	</target>
 
@@ -140,10 +96,10 @@
 			<link offline="true" href="http://www.atg.com/repositories/ContentCatalogRepository_en/manuals/ATG9.1/apidoc/" packagelistLoc="${dynamo.docs.dir}" />
 		</javadoc>
 	</target>
- 
+
  <!-- This target builds the ATG module. -->
 	<target name="build-module" depends="init, compile, -jar" description="">
-		<!-- 
+
 		<echo message="Building module at ${install.dir}." />
 		<mkdir dir="${install.dir}/META-INF" />
 		<copy todir="${install.dir}/META-INF" file="META-INF/MANIFEST.MF" />
@@ -163,43 +119,20 @@
 			<fileset dir="build/config" />
 		</copy>
 
-		<mkdir dir="${install.dir}/liveconfig" />
-		<copy todir="${install.dir}/liveconfig" failonerror="false">
-			<fileset dir="build/liveconfig" />
-		</copy>
-
 		<mkdir dir="${install.dir}/j2ee-apps" />
 		<copy todir="${install.dir}/j2ee-apps">
 			<fileset dir="j2ee-apps" />
 		</copy>
 
-		<mkdir dir="${install.dir}/instance" />
-		<copy todir="${install.dir}/instance" failonerror="false">
-			<fileset dir="instance" />
-		</copy>
-
-		<mkdir dir="${install.dir}/env" />
-		<copy todir="${install.dir}/env" failonerror="false">
-			<fileset dir="env" />
-		</copy>
-		-->
 		<echo message="Module built." />
 	</target>
 
-    <target name="build-modules" depends="build-module" description="builds this module and the PROCESSOR sub-module">
-		<!--	<ant antfile="build.xml" target="build-module" dir="MERCH" /> -->
-		<!-- builds the test war 
-		<ant antfile="build.xml" target="build-module" dir="TEST/" />
-		-->
-	</target>
 
 
 	<!-- Compiles the codebase -->
 	<target name="compile" depends="init,createdirs" description="Compiles the source code to the classes directory.">
 		<mkdir dir="classes" />
 
-		
-		
 		<javac srcdir="src" destdir="classes" debug="true" deprecation="false" optimize="false" source="1.6" target="1.6" verbose="${javac.verbose.bool}">
 			<classpath path="${classpath}" />
 			<classpath refid="lib.classpath" />
@@ -229,7 +162,7 @@
 				</copy>
 			</else>
 		</if>
- 
+
 	</target>
 
 	<!-- Jars the classes and config files, and copies the associated lib files. -->
@@ -252,141 +185,11 @@
 	<target name="-jar" depends="createdirs,-jarclasses,-jarconfig" description="creates build directories, jars classes and configuration">
 	</target>
 
-	<!-- This target uses the runAssembler command to build the assembled ear and deploy it to JBoss. -->
-	<target name="execute-assembler-cmd" description="Executes ATG's runAssembler by command line call">
-		<!-- Configure various arguments to pass to runAssembler depending upon ANT properties set by the user. -->
-		<if name="liveconfig" value="true">
-			<property name="assemble.cmd.liveconfig" value="-liveconfig" />
-			<else>
-				<property name="assemble.cmd.liveconfig" value="" />
-			</else>
-		</if>
-		<if name="standalone" value="true">
-			<property name="assemble.cmd.standalone" value="-standalone" />
-			<else>
-				<property name="assemble.cmd.standalone" value="" />
-			</else>
-		</if>
-		<if name="omitlicenses" value="true">
-			<property name="assemble.cmd.omitlicenses" value="-omit-licenses" />
-			<else>
-				<property name="assemble.cmd.omitlicenses" value="" />
-			</else>
-		</if>
-		<if name="pack" value="true">
-			<property name="assemble.cmd.pack" value="-pack" />
-			<else>
-				<property name="assemble.cmd.pack" value="" />
-			</else>
-		</if>
-		<if name="dynamo.server.name" value="">
-			<property name="assemble.cmd.servername" value="" />
-			<else>
-				<property name="assemble.cmd.servername" value="-server ${dynamo.server.name}" />
-			</else>
-		</if>
-		<if name="include.admin" value="true">
-			<property name="assemble.cmd.modules" value="${module.name} DafEar.Admin ${include.modules}" />
-			<else>
-				<property name="assemble.cmd.modules" value="${module.name} ${include.modules}" />
-			</else>
-		</if>
-
-		<echo message="Invoking RunAssembler Command" />
-		<echo message="dynamo.home=${dynamo.home}" />
-		<echo message="jboss.home=${jboss.home}" />
-		<echo message="assemble.cmd.liveconfig=${assemble.cmd.liveconfig}" />
-		<echo message="assemble.cmd.omitlicenses=${assemble.cmd.omitlicenses}" />
-		<echo message="assemble.cmd.standalone=${assemble.cmd.standalone}" />
-		<echo message="assemble.cmd.pack=${assemble.cmd.pack}" />
-		<echo message="assemble.cmd.servername=${assemble.cmd.servername}" />
-		<echo message="assemble.cmd.modules=${assemble.cmd.modules}" />
-		<echo message=" " />
- 
- 		
-		<echo message="Deploying to ${deploy_directory}/${module.name}.ear" />
-		<if name="isLinux">
-			<echo message="Building the ${module.name}.ear on Linux using runAssembler " />
-			<exec executable="${dynamo.home}/bin/runAssembler">
-				<arg value="-overwrite" />
-				<arg value="${assemble.cmd.liveconfig}" />
-				<arg value="${assemble.cmd.omitlicenses}" />
-				<arg value="${assemble.cmd.standalone}" />
-				<arg value="${assemble.cmd.pack}" />
-				<arg value="${assemble.cmd.servername}" />
-				<arg value="${deploy_directory}/${module.name}.ear" />
-				<arg line="-m ${assemble.cmd.modules}" />
-			</exec>
-		</if>
-		<if name="isMac">
-			<echo message="Building the ${module.name}.ear on OS X using runAssembler " />
-			<exec executable="${dynamo.home}/bin/runAssembler" vmlauncher="false" failonerror="yes">
-				<arg value="-overwrite" />
-				<arg value="${assemble.cmd.liveconfig}" />
-				<arg value="${assemble.cmd.omitlicenses}" />
-				<arg value="${assemble.cmd.standalone}" />
-				<arg value="${assemble.cmd.pack}" />
-				<arg value="${assemble.cmd.servername}" />
-				<arg value="${deploy_directory}/${module.name}.ear" />
-				<arg line="-m ${assemble.cmd.modules}" />
-			</exec>
-		</if>
-		<if name="isWindows">
-			<echo message="Building the ${module.name}.ear on a Windows OS using runAssembler.bat " />
-			<exec executable="${dynamo.home}/bin/runAssembler.bat" vmlauncher="false" failonerror="yes">
-				<arg value="-overwrite" />
-				<arg value="${assemble.cmd.liveconfig}" />
-				<arg value="${assemble.cmd.omitlicenses}" />
-				<arg value="${assemble.cmd.standalone}" />
-				<arg value="${assemble.cmd.pack}" />
-				<arg value="${assemble.cmd.servername}" />
-				<arg value="${deploy_directory}/${module.name}.ear" />
-				<arg line="-m ${assemble.cmd.modules}" />
-			</exec>
-		</if>
-	</target>
-
-	<target name="standalone" description="create an ear and deploy in jboss with standalone" depends="create-static-jar">
-		<echo message="Deploying standalone to ${deploy_directory}/${module.name}.ear " />
-		<if name="isLinux">
-			<echo message="Building the standalone version of ${module.name}.ear on Linux using runAssembler " />
-			<exec executable="${dynamo.home.bin}/runAssembler">
-				<arg value="-standalone" />
-				<arg value="-overwrite" />
-				<arg value="-omit-licenses" />
-				<arg value="-pack" />
-				<arg value="${deploy_directory}/${module.name}.ear" />
-				<arg line="-m ${assemble.cmd.modules}" />
-			</exec>
-		</if>
-		<if name="isMac">
-					<echo message="Building the standalone version of ${module.name}.ear on OS X using runAssembler " />
-					<exec executable="${dynamo.home.bin}/runAssembler" vmlauncher="false" failonerror="yes">
-						<arg value="-standalone" />
-						<arg value="-overwrite" />
-						<arg value="-omit-licenses" />
-						<arg value="-pack" />
-						<arg value="${deploy_directory}/${module.name}.ear" />
-						<arg line="-m ${assemble.cmd.modules}" />
-					</exec>
-		</if>
-		<if name="isWindows">
- 			<echo message="Building the standalone version of ${module.name}.ear on a Windows OS using runAssembler.bat " />
-			<exec executable="${dynamo.home.bin}/runAssembler.bat" vmlauncher="false" failonerror="yes">
-				<arg value="-standalone" />
-				<arg value="-overwrite" />
-				<arg value="-omit-licenses" />
-				<arg value="-pack" />
-				<arg value="${deploy_directory}/${module.name}.ear" />
-				<arg line="-m ${assemble.cmd.modules}" />
-			</exec>
-		</if>
-	</target>
 
 	<target name="create-static-jar" description="This will create a jar file for deployment to the web server so the images, js, and css files can be served from there">
 		<jar destfile="${deploy_directory}/static.jar" basedir="j2ee-apps/${module.name}/${module.name}.war" includes="css/**, js/**, images/**" />
 	</target>
-		
+
 	<!-- Create the directories used in the build process. Not intended to be used publically. -->
 	<target name="createdirs">
 		<mkdir dir="build" />
@@ -408,73 +211,17 @@
 		<echo message="JAVA_HOME       = ${env.JAVA_HOME}" />
 		<echo message="dynamo.home     = ${dynamo.home}" />
 		<echo message="dynamo.root.dir = ${dynamo.root.dir}" />
-		<echo message="jboss.home      = ${jboss.home}" />
 		<echo message="#############################################################################" />
 		<echo message="#############################################################################" />
 		<echo message="" />
 		<echo message="" />
 	</target>
 
-	<target name="wait5Seconds">
-		<sleep seconds="5" />
-	</target>
-
-	<target name="wait1Minute">
-		<sleep minutes="1" />
-	</target>
-
-	<target name="wait3Minutes">
-		<sleep minutes="3" />
-	</target>
-
-	<target name="sendDownNotification">
-		<mail mailhost="colqwewebw2k306" mailport="25" subject="Scotts RI Dev Server Going Down" charset="utf-8" cclist="rostronic@gmail.com,msidesinger@resource.com,ara@citrisys.com,jbruton@resource.com,agieg@resource.com,esmith@resource.com,vheilman@resource.com,bsullivan@resource.com">
-			<from address="jbruton@resource.com" />
-			<to address="jbruton@resource.com" />
-			<message>The Scotts Application on the Resource development server is shutting down for a new build.</message>
-		</mail>
-	</target>
-
-	<target name="sendUpNotification">
-		<mail mailhost="colqwewebw2k306" mailport="25" subject="Scotts RI Dev Server Going Up" charset="utf-8" cclist="rostronic@gmail.com,msidesinger@resource.com,ara@citrisys.com,jbruton@resource.com,agieg@resource.com,esmith@resource.com,vheilman@resource.com,bsullivan@resource.com">
-			<from address="jbruton@resource.com" />
-			<to address="jbruton@resource.com" />
-			<message>The Scotts Application on the Resource development server is coming up with a new build.</message>
-		</mail>
-	</target>
-
-
-	<target name="stopJBoss">
-		<echo message="" />
-		<echo message="#############################################################################" />
-		<echo message="Shutting down Jboss Server" />
-		<echo message="jboss.home      = ${jboss.home}" />
-		<echo message="jboss.server    = ${jboss.server}" />
-		<exec executable="${jboss.home}/bin/shutdown.sh" dir="${jboss.home}" spawn="true">
-			<arg line="-S" />
-		</exec>
-	</target>
-
-	<target name="startJBoss">
-		<echo message="" />
-		<echo message="#############################################################################" />
-		<echo message="Starting Jboss Server" />
-		<echo message="jboss.home      = ${jboss.home}" />
-		<echo message="jboss.server    = ${jboss.server}" />
-		<exec executable="${jboss.home}/bin/run.sh" dir="${jboss.home}/bin" spawn="true">
-			<arg line="-c ${jboss.server}" />
-			<arg line="-Dprogram.name=run.sh" />
-			<arg line="-Djava.endorsed.dirs=${jboss.home}/bin/../lib/endorsed" />
-			<arg line="-Datg.dynamo.modules=MyAPP,PublishingAgent" />
-			<arg line="-Datg.dynamo.server.name=${jboss.server}" />
-			<arg line="-Datg.dynamo.data-dir=${jboss.home}/server/${jboss.server}/ATG-Data" />
-		</exec>
-	</target>
 
 	<target name="report" depends="checkstyle, pmd, cpd, findbugs" />
 
- 
-	
+
+
 	<!-- Generates a Checkstyle report -->
 	<target name="checkstyle">
 		<mkdir dir="gen/reports/checkstyle" />
@@ -489,7 +236,7 @@
 			<formatter type="xml" toFile="gen/reports/checkstyle/checkstyle_report.xml" />
 		</checkstyle>
 		<xslt in="gen/reports/checkstyle/checkstyle_report.xml" out="gen/reports/checkstyle/checkstyle_report.html" style="build-scripts/checkstyle-noframes-sorted.xsl"/>
-		 
+
 	</target>
 
 	<target name="pmd">
@@ -513,7 +260,7 @@
 				<include name="**/*.java" />
 			</fileset>
 		</cpd>
-  		<xslt in="gen/reports/cpd/cpd.xml" out="gen/reports/cpd/cpd.html" style="build-scripts/cpdhtml.xslt"/>  
+  		<xslt in="gen/reports/cpd/cpd.xml" out="gen/reports/cpd/cpd.html" style="build-scripts/cpdhtml.xslt"/>
 	</target>
 
 	<target name="findbugs">
@@ -528,41 +275,4 @@
 		</findbugs>
 	</target>
 
-	<target name="runJunitEETests">
-		<waitfor maxwait="5" maxwaitunit="minute" checkevery="1000">
-			<http url="http://localhost:8080/${module.name}" />
-		</waitfor>
-		<taskdef name="junitee" classname="org.junitee.anttask.JUnitEETask" classpathref="buildlib.classpath" />
-		<junitee url="http://localhost:8840/test/TestServlet" printsummary="true" threaded="false">
-			<test runall="true" />
-		</junitee>
-	</target>
-
-	<!-- This will start up firefox and run Test Suite -->
-	<target name="runSeleniumTests">
-		<waitfor maxwait="5" maxwaitunit="minute" checkevery="1000">
-			<http url="http://localhost:8080/${module.name}" />
-		</waitfor>
-		<echo message="" />
-		<echo message="Running Selenium Tests" />
-		<echo message="output will be saved in /gen/reports/selenium" />
-		<echo message="" />
-		<java jar="TEST/j2ee-apps/test.war/WEB-INF/lib/selenium-server.jar" fork="true">
-			<arg line="-htmlSuite &quot;*firefox ${firefox.home}&quot;" />
-			<arg line="&quot;http://localhost:8840&quot;" />
-			<arg line="&quot;TEST/j2ee-apps/test.war/selenium/tests/TestSuite.html&quot;" />
-			<arg line="&quot;gen/reports/selenium/results.html&quot;" />
-			<arg line="-timeout 60" />
-		</java>
-	</target>
-
-	<target name="runJMeterTests">
-		<mkdir dir="gen/reports/jmeter" />
-		<taskdef name="jmeter" classname="org.programmerplanet.ant.taskdefs.jmeter.JMeterTask" classpathref="buildlib.classpath" />
-		<jmeter jmeterhome="${jmeter.home}" testplan="TEST/j2ee-apps/test.war/jmeter/prodScottsTestPlan.jmx" resultlog="gen/reports/jmeter/JMeterResults.jtl">
-			<property name="jmeter.save.saveservice.assertion_results" value="all" />
-			<property name="jmeter.save.saveservice.output_format" value="xml" />
-		</jmeter>
-		<xslt in="gen/reports/jmeter/JMeterResults.jtl" out="gen/reports/jmeter/JMeterResults.html" style="TEST/j2ee-apps/test.war/jmeter/jmeter-results-detail-report.xsl" />
-	</target>
 </project>

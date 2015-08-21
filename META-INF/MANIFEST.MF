@@ -1,6 +1,7 @@
 Bundle-Name: atgel
 Bundle-SymbolicName: atgel
 Bundle-Version: 1.0.0.qualifier
+ATG-Product: SPARKRED.atgel
 ATG-Required: DAF DAS DAS-UI DSS DCS DCS.AbandonedOrderServices DafEar.JBoss DafEar.base DafEar.Admin DafEar B2CCommerce DPS WebUI
 ATG-EAR-Module: j2ee-apps/atgel
 ATG-Class-Path:  classes lib/jsp-api.jar lib/juel-2.2.1.jar lib/juel-api-2.2.1.jarlib/juel-impl-2.2.1.jar lib/juel-spi-2.2.1.jar lib/servlet-api.jar lib/commons-beanutils-1.7.jar

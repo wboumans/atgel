@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="4.4">
-<file name="/unity/code/atgel/src/org/atgel/i18n/TranslationTools.java">
+<file name="/Users/devon/git/atgel/src/org/atgel/i18n/TranslationTools.java">
 <error line="13" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
 <error line="15" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="18" severity="warning" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
@@ -11,7 +11,7 @@
 <error line="24" column="48" severity="warning" message="Parameter locale should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 <error line="24" column="55" severity="warning" message="Name &apos;locale&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/userprofiling/UserTools.java">
+<file name="/Users/devon/git/atgel/src/org/atgel/userprofiling/UserTools.java">
 <error line="15" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="15" column="46" severity="warning" message="Name &apos;usersLocaleThreadLocal&apos; must match pattern &apos;^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ConstantNameCheck"/>
 <error line="17" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
@@ -24,7 +24,7 @@
 <error line="26" column="59" severity="warning" message="Name &apos;localeStr&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 <error line="29" column="22" severity="warning" message="Variable &apos;parts&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/util/BeanUtils.java">
+<file name="/Users/devon/git/atgel/src/org/atgel/util/BeanUtils.java">
 <error line="20" severity="warning" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 <error line="21" severity="warning" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 <error line="30" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
@@ -42,7 +42,7 @@
 <error line="41" column="61" severity="warning" message="Name &apos;path&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 <error line="46" column="17" severity="warning" message="Variable &apos;m&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
 <error line="47" column="17" severity="warning" message="Variable &apos;b1&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
-<error line="55" column="17" severity="warning" message="Variable &apos;containsPostion&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<error line="55" column="17" severity="warning" message="Variable &apos;containsPosition&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
 <error line="78" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 <error line="78" column="41" severity="warning" message="Parameter o should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 <error line="78" column="48" severity="warning" message="Name &apos;o&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
@@ -64,11 +64,11 @@
 <error line="135" column="15" severity="warning" message="Variable &apos;wrapperType&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
 <error line="136" column="18" severity="warning" message="Variable &apos;newArray&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
 <error line="143" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="143" column="54" severity="warning" message="Parameter methodName should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="143" column="61" severity="warning" message="Name &apos;methodName&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="143" column="55" severity="warning" message="Parameter methodName should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="143" column="62" severity="warning" message="Name &apos;methodName&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 <error line="147" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="147" column="47" severity="warning" message="Parameter methodName should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="147" column="54" severity="warning" message="Name &apos;methodName&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="147" column="48" severity="warning" message="Parameter methodName should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="147" column="55" severity="warning" message="Name &apos;methodName&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 <error line="151" column="13" severity="warning" message="Variable &apos;endIndex&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
 <error line="155" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 <error line="155" column="38" severity="warning" message="Parameter methodName should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
@@ -80,7 +80,7 @@
 <error line="166" column="48" severity="warning" message="Parameter s should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 <error line="166" column="55" severity="warning" message="Name &apos;s&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/util/ComparableComparator.java">
+<file name="/Users/devon/git/atgel/src/org/atgel/util/ComparableComparator.java">
 <error line="21" column="49" severity="warning" message="Unclosed HTML tag found: &lt;RepositoryItem&gt;();" source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
 <error line="40" column="22" severity="warning" message="Name &apos;property&apos; must match pattern &apos;^m[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
 <error line="40" column="22" severity="warning" message="Variable &apos;property&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
@@ -108,23 +108,24 @@
 <error line="74" column="52" severity="warning" message="Name &apos;second&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 <error line="75" column="18" severity="warning" message="Variable &apos;collator&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/util/ComponentResolver.java">
-<error line="23" column="50" severity="warning" message="Parameter componentName should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="23" column="57" severity="warning" message="Name &apos;componentName&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
-<error line="24" column="17" severity="warning" message="Variable &apos;nucleus&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
-<error line="26" column="20" severity="warning" message="Variable &apos;o&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
-<error line="32" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="32" column="44" severity="warning" message="Parameter componentName should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="32" column="51" severity="warning" message="Name &apos;componentName&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
-<error line="33" column="34" severity="warning" message="Variable &apos;dynamoRequest&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
-<error line="40" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="40" column="39" severity="warning" message="Parameter componentName should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="40" column="46" severity="warning" message="Name &apos;componentName&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
-<error line="47" column="16" severity="warning" message="Variable &apos;component&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
-<error line="48" severity="warning" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="48" column="16" severity="warning" message="Variable &apos;result&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<file name="/Users/devon/git/atgel/src/org/atgel/util/ComponentResolver.java">
+<error line="7" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="17" column="50" severity="warning" message="Parameter componentName should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="17" column="57" severity="warning" message="Name &apos;componentName&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="18" column="17" severity="warning" message="Variable &apos;nucleus&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<error line="20" column="20" severity="warning" message="Variable &apos;o&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<error line="26" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="26" column="44" severity="warning" message="Parameter componentName should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="26" column="51" severity="warning" message="Name &apos;componentName&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="27" column="34" severity="warning" message="Variable &apos;dynamoRequest&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<error line="34" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="34" column="39" severity="warning" message="Parameter componentName should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="34" column="46" severity="warning" message="Name &apos;componentName&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="41" column="16" severity="warning" message="Variable &apos;component&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<error line="42" severity="warning" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="42" column="16" severity="warning" message="Variable &apos;result&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/el/I18nELResolver.java">
+<file name="/Users/devon/git/atgel/src/org/atgel/web/el/I18nELResolver.java">
 <error line="29" column="8" severity="warning" message="Unused import - javax.el.CompositeELResolver." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
 <error line="31" column="8" severity="warning" message="Unused import - javax.el.ELException." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
 <error line="33" column="8" severity="warning" message="Unused import - javax.el.PropertyNotWritableException." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
@@ -193,7 +194,7 @@
 <error line="324" column="40" severity="warning" message="Parameter base should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 <error line="324" column="47" severity="warning" message="Name &apos;base&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/el/ImplicitComponents.java">
+<file name="/Users/devon/git/atgel/src/org/atgel/web/el/ImplicitComponents.java">
 <error line="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
 <error line="8" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="8" column="24" severity="warning" message="&apos;,&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAfterCheck"/>
@@ -204,33 +205,56 @@
 <error line="14" column="51" severity="warning" message="&apos;components&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
 <error line="14" column="51" severity="warning" message="Name &apos;components&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/el/NucleusELFunctions.java">
-<error line="12" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
-<error line="13" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="13" column="39" severity="warning" message="Parameter repositoryName should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="13" column="46" severity="warning" message="Name &apos;repositoryName&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
-<error line="13" column="62" severity="warning" message="Parameter itemDescriptor should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="13" column="69" severity="warning" message="Name &apos;itemDescriptor&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
-<error line="13" column="85" severity="warning" message="Parameter id should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="13" column="92" severity="warning" message="Name &apos;id&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
-<error line="15" column="24" severity="warning" message="Variable &apos;repository&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
-<error line="16" column="28" severity="warning" message="Variable &apos;item&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
-<error line="25" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="25" column="42" severity="warning" message="Parameter id should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="25" column="49" severity="warning" message="Name &apos;id&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
-<error line="27" column="24" severity="warning" message="Variable &apos;repository&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
-<error line="28" column="28" severity="warning" message="Variable &apos;item&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
-<error line="36" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="36" column="38" severity="warning" message="Parameter name should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="36" column="45" severity="warning" message="Name &apos;name&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
-<error line="37" column="18" severity="warning" message="Variable &apos;templateComponent&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
-<error line="38" column="16" severity="warning" message="Variable &apos;template&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
-<error line="39" column="16" severity="warning" message="Variable &apos;result&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
-<error line="43" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="43" column="34" severity="warning" message="Parameter e should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="43" column="44" severity="warning" message="Name &apos;e&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<file name="/Users/devon/git/atgel/src/org/atgel/web/el/NucleusELFunctions.java">
+<error line="14" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
+<error line="16" severity="warning" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="16" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="18" severity="warning" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="18" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="18" column="31" severity="warning" message="Name &apos;PRODUCT_CATALOG_REPOSITORY&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.StaticVariableNameCheck"/>
+<error line="19" severity="warning" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="19" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="19" column="31" severity="warning" message="Name &apos;PROFILE_REPOSITORY&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.StaticVariableNameCheck"/>
+<error line="20" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
+<error line="20" column="29" severity="warning" message="Name &apos;TEMPLATE&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.StaticVariableNameCheck"/>
+<error line="22" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="22" column="39" severity="warning" message="Parameter repositoryName should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="22" column="46" severity="warning" message="Name &apos;repositoryName&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="22" column="62" severity="warning" message="Parameter itemDescriptor should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="22" column="69" severity="warning" message="Name &apos;itemDescriptor&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="22" column="85" severity="warning" message="Parameter id should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="22" column="92" severity="warning" message="Name &apos;id&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="24" column="24" severity="warning" message="Variable &apos;repository&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<error line="25" column="28" severity="warning" message="Variable &apos;item&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<error line="33" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="33" column="40" severity="warning" message="Parameter repositoryName should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="33" column="47" severity="warning" message="Name &apos;repositoryName&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="33" column="63" severity="warning" message="Parameter itemDescriptor should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="33" column="70" severity="warning" message="Name &apos;itemDescriptor&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="33" column="86" severity="warning" message="Parameter rql should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="33" column="93" severity="warning" message="Name &apos;rql&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="35" column="24" severity="warning" message="Variable &apos;repository&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<error line="37" column="28" severity="warning" message="Variable &apos;view&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<error line="38" column="26" severity="warning" message="Variable &apos;statement&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<error line="39" column="22" severity="warning" message="Variable &apos;params&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<error line="39" column="28" severity="warning" message="&apos;=&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="40" column="30" severity="warning" message="Variable &apos;items&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<error line="40" column="61" severity="warning" message="&apos;(&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.MethodParamPadCheck"/>
+<error line="48" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="48" column="42" severity="warning" message="Parameter id should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="48" column="49" severity="warning" message="Name &apos;id&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="51" column="28" severity="warning" message="Variable &apos;item&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<error line="59" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="59" column="46" severity="warning" message="Parameter id should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="59" column="53" severity="warning" message="Name &apos;id&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="62" column="28" severity="warning" message="Variable &apos;item&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<error line="72" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="72" column="38" severity="warning" message="Parameter name should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="72" column="45" severity="warning" message="Name &apos;name&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="73" column="16" severity="warning" message="Variable &apos;template&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
+<error line="74" column="16" severity="warning" message="Variable &apos;result&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/el/RepositoryItemELResolver.java">
+<file name="/Users/devon/git/atgel/src/org/atgel/web/el/RepositoryItemELResolver.java">
 <error line="23" column="8" severity="warning" message="Unused import - javax.el.CompositeELResolver." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
 <error line="28" column="8" severity="warning" message="Unused import - atg.apache.taglibs.standard.lang.jstl.ELException." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
 <error line="45" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
@@ -307,7 +331,7 @@
 <error line="379" column="40" severity="warning" message="Parameter base should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 <error line="379" column="47" severity="warning" message="Name &apos;base&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/el/RootPropertyResolver.java">
+<file name="/Users/devon/git/atgel/src/org/atgel/web/el/RootPropertyResolver.java">
 <error line="17" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
 <error line="18" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="18" column="33" severity="warning" message="Name &apos;rootObjects&apos; must match pattern &apos;^m[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
@@ -375,7 +399,7 @@
 <error line="107" column="75" severity="warning" message="Parameter value should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 <error line="107" column="82" severity="warning" message="Name &apos;value&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/el/SimpleResolver.java">
+<file name="/Users/devon/git/atgel/src/org/atgel/web/el/SimpleResolver.java">
 <error line="33" severity="warning" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 <error line="38" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="38" column="39" severity="warning" message="Name &apos;delegate&apos; must match pattern &apos;^m[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
@@ -440,7 +464,7 @@
 <error line="85" column="96" severity="warning" message="Parameter params should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 <error line="85" column="105" severity="warning" message="Name &apos;params&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/pipeline/DefaultParametersPipelineServlet.java">
+<file name="/Users/devon/git/atgel/src/org/atgel/web/pipeline/DefaultParametersPipelineServlet.java">
 <error line="16" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
 <error line="18" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="18" column="32" severity="warning" message="Name &apos;implicitComponenets&apos; must match pattern &apos;^m[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
@@ -459,7 +483,7 @@
 <error line="35" column="24" severity="warning" message="Variable &apos;key&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
 <error line="36" column="24" severity="warning" message="Variable &apos;value&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/pipeline/ELContextListener.java">
+<file name="/Users/devon/git/atgel/src/org/atgel/web/pipeline/ELContextListener.java">
 <error line="14" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
 <error line="16" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 <error line="19" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
@@ -472,7 +496,7 @@
 <error line="28" column="34" severity="warning" message="Parameter servletContextEvent should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 <error line="28" column="54" severity="warning" message="Name &apos;servletContextEvent&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/pipeline/InsertablePipelineServlet.java">
+<file name="/Users/devon/git/atgel/src/org/atgel/web/pipeline/InsertablePipelineServlet.java">
 <error line="12" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
 <error line="14" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="14" column="21" severity="warning" message="Name &apos;enabled&apos; must match pattern &apos;^m[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
@@ -494,31 +518,24 @@
 <error line="41" column="62" severity="warning" message="Name &apos;request&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 <error line="41" column="97" severity="warning" message="Name &apos;response&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/pipeline/UserLocalePipelineServlet.java">
+<file name="/Users/devon/git/atgel/src/org/atgel/web/pipeline/UserLocalePipelineServlet.java">
 <error line="15" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
-<error line="18" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="18" column="27" severity="warning" message="Name &apos;localeService&apos; must match pattern &apos;^m[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
-<error line="20" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="24" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="24" column="34" severity="warning" message="Parameter localeService should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="24" column="48" severity="warning" message="&apos;localeService&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="24" column="48" severity="warning" message="Name &apos;localeService&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
-<error line="28" severity="warning" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="28" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="28" column="28" severity="warning" message="Parameter request should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="28" column="53" severity="warning" message="Name &apos;request&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
-<error line="28" column="62" severity="warning" message="Parameter response should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="28" column="88" severity="warning" message="Name &apos;response&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="18" severity="warning" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="18" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="18" column="28" severity="warning" message="Parameter request should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="18" column="53" severity="warning" message="Name &apos;request&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="18" column="62" severity="warning" message="Parameter response should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="18" column="88" severity="warning" message="Name &apos;response&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/template/ExpressionEvaluator.java">
+<file name="/Users/devon/git/atgel/src/org/atgel/web/template/ExpressionEvaluator.java">
 <error line="15" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
 <error line="18" severity="warning" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 <error line="18" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="20" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
-<error line="20" column="35" severity="warning" message="Parameter expersionText should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="20" column="42" severity="warning" message="Name &apos;expersionText&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
-<error line="20" column="57" severity="warning" message="Parameter rootObjects should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="20" column="77" severity="warning" message="Name &apos;rootObjects&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="20" column="35" severity="warning" message="Parameter expressionText should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="20" column="42" severity="warning" message="Name &apos;expressionText&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
+<error line="20" column="58" severity="warning" message="Parameter rootObjects should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
+<error line="20" column="78" severity="warning" message="Name &apos;rootObjects&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 <error line="27" column="31" severity="warning" message="Variable &apos;factory&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
 <error line="28" column="27" severity="warning" message="Variable &apos;context&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
 <error line="29" column="29" severity="warning" message="Variable &apos;expression&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
@@ -528,7 +545,7 @@
 <error line="46" column="42" severity="warning" message="Name &apos;expersionText&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 <error line="47" column="16" severity="warning" message="Variable &apos;result&apos; should be declared final." source="com.puppycrawl.tools.checkstyle.checks.coding.FinalLocalVariableCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/template/Template.java">
+<file name="/Users/devon/git/atgel/src/org/atgel/web/template/Template.java">
 <error line="6" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
 <error line="8" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="8" column="33" severity="warning" message="Name &apos;template&apos; must match pattern &apos;^m[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
@@ -537,7 +554,7 @@
 <error line="14" column="23" severity="warning" message="Parameter name should be final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 <error line="14" column="30" severity="warning" message="Name &apos;name&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/tools/DynamoHttpServletRequestWrapper.java">
+<file name="/Users/devon/git/atgel/src/org/atgel/web/tools/DynamoHttpServletRequestWrapper.java">
 <error line="46" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
 <error line="47" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="47" column="38" severity="warning" message="Name &apos;request&apos; must match pattern &apos;^m[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
@@ -1056,7 +1073,7 @@
 <error line="1069" column="69" severity="warning" message="&apos;request&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
 <error line="1069" column="69" severity="warning" message="Name &apos;request&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/tools/DynamoHttpServletResponseWrapper.java">
+<file name="/Users/devon/git/atgel/src/org/atgel/web/tools/DynamoHttpServletResponseWrapper.java">
 <error line="18" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocTypeCheck"/>
 <error line="19" column="5" severity="warning" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="19" column="39" severity="warning" message="Name &apos;response&apos; must match pattern &apos;^m[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
@@ -1182,25 +1199,25 @@
 <error line="253" column="71" severity="warning" message="&apos;response&apos; hides a field." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
 <error line="253" column="71" severity="warning" message="Name &apos;response&apos; must match pattern &apos;^p[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/tools/package.html">
+<file name="/Users/devon/git/atgel/src/org/atgel/util/package.html">
 <error line="0" severity="warning" message="Missing package documentation file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.PackageHtmlCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/pipeline/package.html">
+<file name="/Users/devon/git/atgel/src/org/atgel/i18n/package.html">
 <error line="0" severity="warning" message="Missing package documentation file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.PackageHtmlCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/util/package.html">
+<file name="/Users/devon/git/atgel/src/org/atgel/web/template/package.html">
 <error line="0" severity="warning" message="Missing package documentation file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.PackageHtmlCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/template/package.html">
+<file name="/Users/devon/git/atgel/src/org/atgel/web/el/package.html">
 <error line="0" severity="warning" message="Missing package documentation file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.PackageHtmlCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/web/el/package.html">
+<file name="/Users/devon/git/atgel/src/org/atgel/web/pipeline/package.html">
 <error line="0" severity="warning" message="Missing package documentation file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.PackageHtmlCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/i18n/package.html">
+<file name="/Users/devon/git/atgel/src/org/atgel/web/tools/package.html">
 <error line="0" severity="warning" message="Missing package documentation file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.PackageHtmlCheck"/>
 </file>
-<file name="/unity/code/atgel/src/org/atgel/userprofiling/package.html">
+<file name="/Users/devon/git/atgel/src/org/atgel/userprofiling/package.html">
 <error line="0" severity="warning" message="Missing package documentation file." source="com.puppycrawl.tools.checkstyle.checks.javadoc.PackageHtmlCheck"/>
 </file>
 </checkstyle>

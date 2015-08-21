@@ -4,11 +4,11 @@ import java.util.Locale;
 
 
 /**
- * 
- * A simple threadLocale used to store the current users locale
- * 
+ *
+ * A simple threadLocal Locale used to store the current users locale
+ *
  * @author jon pallas
- * 
+ *
  */
 public class UserTools {
 
