@@ -31,5 +31,5 @@ You can download pre-build modules from the [Releases page](https://github.com/s
 </c:forEach>
 ```
 
-These example are in the test app, its simpler and much faster approximately **x600** times as fast. 
+These examples are in the test application supplied, its simpler and much faster approximately **x600** times as fast. 
 This software was created by Jon Pallas, ATG architect - jon@varelma.com
